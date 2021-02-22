@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import style from './Buttons.module.css';
 
 const Buttons = ({ setStats, name, indx }) => {
@@ -7,6 +8,12 @@ const Buttons = ({ setStats, name, indx }) => {
       {name}
     </button>
   );
+};
+
+Buttons.propTypes = {
+  name: PropTypes.string.isRequired,
+  indx: PropTypes.number.isRequired,
+  setStats: PropTypes.func.isRequired,
 };
 
 export default Buttons;

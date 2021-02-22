@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import style from './Statistics.module.css';
 
 const Statistics = ({
@@ -28,6 +29,14 @@ const Statistics = ({
 Statistics.defaultProps = {
   total: 0,
   countPositiveFeedbackPercentage: 0,
+};
+
+Statistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number,
+  countPositiveFeedbackPercentage: PropTypes.string,
 };
 
 export default Statistics;
