@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Container from './Components/Container/Container';
-import Buttons from './Components/Buttons/Buttons';
 import Statistics from './Components/Statistics/Statistics';
 import FeedbackOptions from './Components/FeedbackOptions/FeedbackOptions';
 
