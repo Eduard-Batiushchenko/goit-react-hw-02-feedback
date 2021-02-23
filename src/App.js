@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Container from './Components/Container/Container';
 import Buttons from './Components/Buttons/Buttons';
 import Statistics from './Components/Statistics/Statistics';
+import FeedbackOptions from './Components/FeedbackOptions/FeedbackOptions';
 
 class App extends Component {
   state = {
@@ -37,18 +38,10 @@ class App extends Component {
     return (
       <Container>
         <h1>Please leave a feedback</h1>
-        <div>
-          {this.buttonsName.map((name, indx) => {
-            return (
-              <Buttons
-                key={name}
-                name={name}
-                indx={indx}
-                setStats={this.setStats}
-              />
-            );
-          })}
-        </div>
+        <FeedbackOptions
+          buttonsName={this.buttonsName}
+          setStats={this.setStats}
+        />
         {countTotalFeedback > 0 ? (
           <Statistics
             {...this.state}
