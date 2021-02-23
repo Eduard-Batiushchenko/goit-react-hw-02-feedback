@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Buttons from '../Buttons/Buttons';
 
 const FeedbackOptions = ({ buttonsName, setStats }) => {
@@ -11,6 +12,11 @@ const FeedbackOptions = ({ buttonsName, setStats }) => {
       })}
     </div>
   );
+};
+
+FeedbackOptions.propTypes = {
+  buttonsName: PropTypes.array.isRequired,
+  setStats: PropTypes.func.isRequired,
 };
 
 export default FeedbackOptions;
